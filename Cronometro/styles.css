@@ -1,0 +1,128 @@
+/* Importação da fonte Pixel Art do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* --- Reset e Configurações Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', monospace;
+    image-rendering: pixelated; /* Mantém imagens e bordas com visual pixelado nítido em HD */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a0b2e; /* Roxo escuro de fundo */
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Imagem de Fundo em Pixel Art --- */
+body > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.25; /* Escurece o fundo para destacar o painel do cronômetro */
+    filter: brightness(0.8) contrast(1.2);
+}
+
+/* --- Container Principal (Painel Pixelado) --- */
+body {
+    gap: 25px;
+}
+
+/* Estilo do Display do Cronômetro */
+body > div:nth-of-type(1) {
+    background: #2a124a;
+    border: 6px solid #a855f7;
+    /* Efeito de borda dupla estilo caixa de diálogo de RPG retro */
+    box-shadow: 
+        0 0 0 4px #100520,
+        0 0 20px rgba(168, 85, 247, 0.6),
+        inset 0 0 15px rgba(0, 0, 0, 0.8);
+    padding: 25px 40px;
+    border-radius: 4px;
+    text-align: center;
+    min-width: 320px;
+}
+
+/* Texto dos Números (00:00:00) */
+body > div:nth-of-type(1) span {
+    font-size: 2.2rem;
+    color: #e9d5ff;
+    letter-spacing: 3px;
+    /* Brilho Neon Roxo */
+    text-shadow: 
+        3px 3px 0px #581c87,
+        0 0 10px #c084fc;
+}
+
+/* --- Area dos Botões --- */
+body > div:nth-of-type(2) {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --- Estilo Retro dos Botões --- */
+button {
+    font-size: 0.85rem;
+    padding: 14px 22px;
+    color: #ffffff;
+    background-color: #6b21a8;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+    outline: none;
+    
+    /* Efeito de borda pixelada 3D  */
+    box-shadow: 
+        inset -4px -4px 0px #3b0764,
+        inset 4px 4px 0px #a855f7,
+        0 4px 0px #100520;
+        
+    transition: all 0.1s ease;
+}
+
+/* Hover nos Botões  */
+button:hover {
+    background-color: #7e22ce;
+    box-shadow: 
+        inset -4px -4px 0px #4c1d95,
+        inset 4px 4px 0px #c084fc,
+        0 4px 15px rgba(192, 132, 252, 0.6);
+    color: #f3e8ff;
+}
+
+/* Efeito de clique (Botão afundando) */
+button:active {
+    top: 4px;
+    box-shadow: 
+        inset -2px -2px 0px #3b0764,
+        inset 2px 2px 0px #a855f7,
+        0 0px 0px #100520;
+}
+
+
+button:nth-child(1) { /* Iniciar */
+    background-color: #581c87;
+}
+
+button:nth-child(2) { /* Parar */
+    background-color: #701a75;
+}
+
+button:nth-child(3) { /* Resetar */
+    background-color: #3b0764;
+}
