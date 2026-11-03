@@ -1,3 +1,4 @@
+<img width="1905" height="869" alt="Cronometro-pixel" src="https://github.com/user-attachments/assets/f3ca0e86-0d70-499c-825e-980f6117f420" />
 <div align="center">
 
 # 🕹️ Pixel Chrono — Retro Timer
@@ -19,12 +20,6 @@ O **Pixel Chrono** é uma aplicação web leve desenvolvida com HTML5, CSS3 e Ja
 
 ---
 
-## 🚀 Demonstração Visual
-
-> *Insira um print ou GIF do seu cronômetro rodando aqui!*
-<!-- Exemplo: <div align="center"><img src="assets/preview.gif" width="600px"></div> -->
-
----
 
 ## 🛠️ Tecnologias Utilizadas
 
